@@ -1,0 +1,9 @@
+# JavaScript Journey Continues
+
+Working on the main idea of JavaScript
+
+1. Save the data
+
+2. Generate the HTML
+
+3. Make it interactive
