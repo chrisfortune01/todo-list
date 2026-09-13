@@ -9,6 +9,7 @@ const todoArray = [
     }
 ]
 renderTodoList()
+/*
 function renderTodoList() {
     let displayTodoHTML = ''
     for (let i = 0; i < todoArray.length; i++) {
@@ -26,6 +27,37 @@ function renderTodoList() {
         `;
         displayTodoHTML += displayTodo;
     }
+    console.log(document.querySelector('.todo-item').innerHTML = displayTodoHTML);
+}
+*/
+function renderTodoList() {
+    let displayTodoHTML = ''
+    todoArray.forEach(
+        /*function(arrayObject, index) {
+            const { name, dueDate } = arrayObject;
+            const displayTodo = `
+                <div>${name}</div>
+                <div>${dueDate}</div> 
+                <button class="delete-button" onclick="
+                    todoArray.splice(${index}, 1);
+                    renderTodoList();
+                ">Delete</button>
+            `;
+            displayTodoHTML += displayTodo;
+        }*/
+       (arrayObject, index) =>  {
+            const { name, dueDate } = arrayObject;
+            const displayTodo = `
+                <div>${name}</div>
+                <div>${dueDate}</div> 
+                <button class="delete-button" onclick="
+                    todoArray.splice(${index}, 1);
+                    renderTodoList();
+                ">Delete</button>
+            `;
+            displayTodoHTML += displayTodo;
+        }
+    )
     console.log(document.querySelector('.todo-item').innerHTML = displayTodoHTML);
 }
 function addInput() {
